@@ -1,0 +1,25 @@
+/*----CSS Demo----*/
+
+
+/*----Box Sizing----*/
+
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+/*----Global Styles----*/
+
+  body{
+    font-family: "Lora", serif;
+  }
+
+
+  header.primary{
+    background-color: red;
+  }
+
