@@ -12,7 +12,21 @@ html {
     box-sizing: inherit;
   }
 
-/*----Global Styles----*/
+/*----Responsive images----*/
+
+img{
+  max-width:100%;
+}
+
+  /*----utility Classes----*/
+
+.container{
+  max-width:950px;
+  width:80vw;
+  margin:40px auto;
+}
+
+  /*----Global Styles----*/
 
   body{
     font-family: 'Courier New', Courier, monospace;
@@ -85,3 +99,71 @@ header.primary nav a{
 header.primary nav:hover{ 
   background-color:rgba(0,0,0, .4);
 }
+
+@media screen and (max-width: 600px){
+  header.primary ul{                                       /*---making it mobile friendly---*/
+  flex-direction: column;
+  gap:20px;
+  max-width: 250px;
+  margin:auto;
+
+}
+
+header.primary nav a {
+  display:block;
+}
+}
+
+#content h2{
+  color:purple;
+  border-bottom:3px dotted grey;
+}
+
+#content h3{
+  color: black;
+  border-left: 7px solid black;
+  padding:7.5px;
+}
+
+#blog{ 
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+  gap:2row;
+}
+
+#blog .post{
+box-shadow: 0 10px 16px black;
+padding: 12px;
+border-radius: 4px;
+font-size: .8rem;
+transition:.5%;
+}
+
+#blog figure{
+  margin:0;
+}
+
+#blog figcaption{
+  text-transform:uppercase;
+  font-size: .6rem;
+  text-align:center;
+  color:grey;
+}
+
+#blog header{
+  padding-top:10px;
+  font-size: .6rem;
+}
+
+#blog header h2{margin:0px;
+}
+
+#blog h2 a{
+  color:purple;
+}
+
+#blog .post:hover{
+  box-shadow: 0 8px 16 black;
+  }
+  
