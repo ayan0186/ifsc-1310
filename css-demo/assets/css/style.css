@@ -26,6 +26,23 @@ img{
   margin:40px auto;
 }
 
+.img-right{
+  float:right;
+  margin: 10px 0 10px 20px;
+  border:2px dotted grey;
+  padding:5px;
+  border-radius: 1rem;
+}
+
+.img-left{
+  float:left;
+  margin: 10px 20px 10px 0;
+  border:2px dotted grey;
+  padding:5px;
+  border-radius: 1rem;
+}
+
+
   /*----Global Styles----*/
 
   body{
@@ -125,19 +142,23 @@ header.primary nav a {
   padding:7.5px;
 }
 
-#blog{ 
+#blog{
   display:flex;
   flex-direction:row;
   justify-content:space-around;
-  gap:2row;
+  gap:2rem;
+  border-bottom:1px dotted #c0c0c0;
+  padding: 2rem 0;
+  border-top:1px dotted #c0c0c0;
+
 }
 
 #blog .post{
-box-shadow: 0 10px 16px black;
-padding: 12px;
-border-radius: 4px;
-font-size: .8rem;
-transition:.5%;
+  box-shadow: 0 4px 8px rgba(0,0,0,.6);
+  padding: 10px;
+  border-radius:4px;
+  font-size:.8rem;
+  transition:.5s;
 }
 
 #blog figure{
@@ -146,24 +167,87 @@ transition:.5%;
 
 #blog figcaption{
   text-transform:uppercase;
-  font-size: .6rem;
+  font-size:.6rem;
   text-align:center;
-  color:grey;
+  color:#c0c0c0;
 }
 
 #blog header{
   padding-top:10px;
-  font-size: .6rem;
+  font-size:.6rem;
+  color:#c0c0c0;
 }
 
-#blog header h2{margin:0px;
+#blog header h2{
+  margin:0;
 }
 
-#blog h2 a{
-  color:purple;
+#blog a{
+  color:#3b638b;
 }
 
 #blog .post:hover{
-  box-shadow: 0 8px 16 black;
-  }
-  
+  box-shadow: 0 8px 16px rgba(0,0,0,.6);
+}
+
+#practice h2{
+  color:purple;
+  border-bottom:3px dotted grey;
+}
+
+table{
+  border:1px solid grey;
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+}
+caption{
+  font-weight: bold;
+  margin:50px;
+}
+th{
+  background-color: darkorchid;
+  color:white;
+  padding:7.5px
+}
+tr:nth-child(even){
+  background-color: lightgrey;
+}
+td{
+  border:2px solid grey;
+  padding:6px;
+}
+
+aside[role="complementary"]{
+  background-color: #172635;
+  color:#ffffff;
+  padding:1.25rem;
+}
+
+aside .container{
+  display:flex;
+  flex-direction: row;
+  gap:50px;
+  justify-content: center;
+}
+
+aside .container a{
+display:block;
+color:white;
+text-align:right;
+margin-top: 1rem;
+}
+
+aside .widget footer{ 
+  display:none;
+}
+
+#colophon{
+  background-color: #3b638b;
+  text-align: center;
+  padding:10px;
+  color:white;
+  font-size: 1.1rem;
+}
+
+
