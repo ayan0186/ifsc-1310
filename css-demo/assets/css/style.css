@@ -51,6 +51,7 @@ img{
 
 
   header.primary {
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.8'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     background-color:purple;
     color:#ffffff; 
     text-align:center;  
@@ -103,18 +104,18 @@ header.primary ul li{
 header.primary nav a{ 
   color: #ffffff;
   text-decoration: none;
-  background-color: #000000;
+  background-color: darkgray;
   background-color:rbga(0,0,0, .4); 
   padding-top: 5px 10px;
   border-radius: 20px;
   border: 1px solid #c0c0c0;
-  transition: 4s;
+  transition: 1ms;
 
 
 }
 
-header.primary nav:hover{ 
-  background-color:rgba(0,0,0, .4);
+header.primary nav a:hover{ 
+  background-color:rgba(0,0,0, .9);
 }
 
 @media screen and (max-width: 600px){
@@ -213,10 +214,64 @@ th{
 tr:nth-child(even){
   background-color: lightgrey;
 }
+
+tr:hover{
+  background-color: rgba(0,0,0, .4);
+}
+
 td{
   border:2px solid grey;
   padding:6px;
 }
+
+td:nth-child(n+2){ 
+  text-align: right;
+}
+
+#practice ol{
+  list-style-type:lower-decimal;
+}
+
+#practice ul ul{
+  list-style-type: square;
+}
+
+#practice dl dt{
+  font-weight: bold;
+}
+
+#practice dl dd{
+  margin:0;
+}
+
+dd+dt{
+  margin-top: 1rem;
+}
+
+#practice blockquote{
+  border:4x double;
+  padding: 20px 40px;
+  margin: 40px 80px; 
+  border-radius: 10px;
+  background-color:purple;
+  text-shadow: grey;
+  text-decoration: none;
+  line-height: 1.4;
+  color: #ffffff
+}
+
+#practice blockquote{
+  display:block;
+  text-align:right;
+  font-size: .9rem;
+  margin-top: 1rem;
+}
+
+#practice blockquote cite{
+  text-decoration: underline;
+  font-weight:bold;
+}
+
 
 aside[role="complementary"]{
   background-color: #172635;
