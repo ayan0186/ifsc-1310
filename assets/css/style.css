@@ -26,7 +26,7 @@ nav ul li{
 
 nav ul li:hover{
     background-color: #B549F2;
-    transition: .5s
+    transition: .5s;
 }
 
 body {
