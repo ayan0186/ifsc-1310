@@ -53,3 +53,13 @@ body {
     padding:20px;
     font-size:1.4rem;
 }
+
+#progressive-enhancement h2{
+    border-bottom: solid;
+    font-size:2.0rem;
+}
+
+#progressive-enhancement p{
+    padding:20px;
+    font-size:1.4rem;
+}
