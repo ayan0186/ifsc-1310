@@ -91,13 +91,14 @@ function JsFun() {
 
 }
 
+//function for bitwise operators
 function calculate() { 
     let A = parseInt(document.getElementById("BinaryA").value, 10);
     let B = parseInt(document.getElementById("BinaryB").value, 10); 
 
-    let andResults = A & B;
-    let orResults = A | B;
-    let XorResults = A ^ B; 
+    let andResults = A & B; //Sets each bit to 1 if both bits are 1
+    let orResults = A | B; //Sets each bit to 1 if one of two bits is 1
+    let XorResults = A ^ B; //	Sets each bit to 1 if only one of two bits is 1
 
     alert(
         "Bitwise And Operator: "+ andResults + "\n" + 
