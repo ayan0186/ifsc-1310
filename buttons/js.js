@@ -56,12 +56,12 @@ function truthTable() {
     B = false; 
     output.innerHTML += (A ? 'T' : 'F') + "     " + (B ? 'T' : 'F') + "           " + (A || B ? 'T' : 'F') + "<br>";
 
-    A = "false";
-    B = "true"; 
+    A = false;
+    B = true; 
     output.innerHTML += (A ? 'F' : 'F') + "     " + (B ? 'T' : 'F') + "           " + (A || B ? 'T' : 'F') + "<br>";
 
-    A = "false"; 
-    B = "false"; 
+    A = false; 
+    B = false; 
     output.innerHTML += (A ? 'F' : 'F') + "     " + (B ? 'F' : 'F') + "           " + (A || B ? 'F' : 'F') + "<br>";
 
     //For AND operator
@@ -76,12 +76,12 @@ function truthTable() {
     B = false; 
     output.innerHTML += (A ? 'T' : 'F') + "     " + (B ? 'T' : 'F') + "           " + (A && B ? 'F' : 'F') + "<br>";
 
-    A = "false";
-    B = "true"; 
+    A = false;
+    B = true; 
     output.innerHTML += (A ? 'T' : 'F') + "     " + (B ? 'T' : 'F') + "           " + (A && B ? 'F' : 'F') + "<br>";
 
-    A = "false"; 
-    B = "false"; 
+    A = false; 
+    B = false; 
     output.innerHTML += (A ? 'T' : 'F') + "     " + (B ? 'T' : 'F') + "           " + (A && B ? 'F' : 'F') + "<br>";
 
 }
