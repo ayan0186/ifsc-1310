@@ -35,3 +35,76 @@ function divNumber() {
     var results = num1 / num2; 
     alert( num1 + " / " + num2 + " = " + results); 
 }
+
+function truthTable() { 
+    let output = document.getElementById("generateTruth"); 
+
+    output.innerHTML = "";
+    
+    //+= is so that all of the lines are togther and all show up together
+    output.innerHTML += "A     B      (A  OR  B)<br>";
+    output.innerHTML += "-----------------------<br>";
+    //declare variable
+    let A, B; 
+
+    //(A ? 'T' : 'F') is a short form if statement that says check the value of A if it is true print T if not then F
+    A = true;
+    B = true;
+    output.innerHTML += (A ? 'T' : 'F') + "     " + (B ? 'T' : 'F') + "           " + (A || B ? 'T' : 'F') + "<br>";
+
+    A = true;
+    B = false; 
+    output.innerHTML += (A ? 'T' : 'F') + "     " + (B ? 'T' : 'F') + "           " + (A || B ? 'T' : 'F') + "<br>";
+
+    A = "false";
+    B = "true"; 
+    output.innerHTML += (A ? 'F' : 'F') + "     " + (B ? 'T' : 'F') + "           " + (A || B ? 'T' : 'F') + "<br>";
+
+    A = "false"; 
+    B = "false"; 
+    output.innerHTML += (A ? 'F' : 'F') + "     " + (B ? 'F' : 'F') + "           " + (A || B ? 'F' : 'F') + "<br>";
+
+    //For AND operator
+    output.innerHTML += "A     B      (A  and  B)<br>";
+    output.innerHTML += "-----------------------<br>";
+
+    A = true;
+    B = true;
+    output.innerHTML += (A ? 'T' : 'F') + "     " + (B ? 'T' : 'F') + "           " + (A && B ? 'T' : 'F') + "<br>";
+
+    A = true;
+    B = false; 
+    output.innerHTML += (A ? 'T' : 'F') + "     " + (B ? 'T' : 'F') + "           " + (A && B ? 'F' : 'F') + "<br>";
+
+    A = "false";
+    B = "true"; 
+    output.innerHTML += (A ? 'T' : 'F') + "     " + (B ? 'T' : 'F') + "           " + (A && B ? 'F' : 'F') + "<br>";
+
+    A = "false"; 
+    B = "false"; 
+    output.innerHTML += (A ? 'T' : 'F') + "     " + (B ? 'T' : 'F') + "           " + (A && B ? 'F' : 'F') + "<br>";
+
+}
+
+function JsFun() { 
+    if (prompt('Is JavaScript fun?')==='yes') alert('You win'); else alert('you lose');
+
+}
+
+function calculate() { 
+    let A = parseInt(document.getElementById("BinaryA").value, 10);
+    let B = parseInt(document.getElementById("BinaryB").value, 10); 
+
+    let andResults = A & B;
+    let orResults = A | B;
+    let XorResults = A ^ B; 
+
+    alert(
+        "Bitwise And Operator: "+ andResults + "\n" + 
+        "Bitwise or Operator: " + orResults + "\n" + 
+        "Bitwise XOR Operator: " + XorResults
+    );
+    
+
+
+}
