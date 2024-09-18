@@ -1,0 +1,57 @@
+/*-----Box Sizing*/
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  body{
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+   h1, h2{
+    text-align: center;
+  }
+
+  #chatbox {
+    width: 100%;        /* Full width of the container */
+    height: 350px;      /* Increase the height to make it bigger */
+    background-color: #444;
+    border: 1px solid #666;
+    padding: 20px;      /* Add more padding for better spacing */
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 16px;    /* Increase the font size for better readability */
+}
+
+#userCommands {
+    width: 100%;         /* Full width */
+    height: 50px;        /* Increased height */
+    padding: 10px;       /* Internal padding for spacing */
+    font-size: 18px;     /* Larger text size */
+    border: 1px solid #666;
+    border-radius: 5px;  /* Rounded corners */
+    box-sizing: border-box;
+}
+
+button {
+    text-align: center;
+    display: flex;          /* Enables flexbox layout */
+    justify-content: space-between; /* Ensures space is managed well */
+    align-items: center;    /* Vertically center-align the items */
+    margin-top: 10px;
+    height: 20px;
+    width: 50px;
+}
+
+body{ 
+  background-image:url('celestial-ark/assets/img/forest.jpg');
+  background-size: cover; /* Make sure the image covers the whole page */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating the image */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
