@@ -39,35 +39,40 @@ function processCommands() {
     //forest
     else if (currentState === "forest") {
         if (walk.includes(input)) {
+            currentState = "path";
             console.log("Player Encounters Path");
             output.innerHTML = "You see a path leading deeper into the forest... Do you follow path or explore more?";
 
         } else if (path.includes(input)) {
             console.log("Player Follows Path");
-            currentState = "path";
+            currentState = "house";
             output.innerHTML = "You follow the path and notice an empty field with a house in the middle. Do you enter?";
 
         } else if (explore.includes(input)){
-            currentState = "path"; 
+            currentState = "cave"; 
             console.log("player chooses to explore");
             output.innerHTML = "You chose to explore the area more and it starts pouring rain. You then find a cave do you want to enter cave or go back on the path?";
         } 
 }   
     //path
-    else if (currentState === "path") {
+    else if (currentState === "house") {
         if (house.includes(input)) {
             console.log("Player Enters House");
-            currentState = "house";
+            currentState = "explore house";
             output.innerHTML = "You enter the house and it seems to be abandoned, but something strange.... you can tell something seems off about this house. Do you want to Explore or leave?";
 
-        } else if (cave.includes(input)) {
-            console.log("Player Enters Cave");
-            currentState = "cave"; 
-            output.innerHTML = "You enter the cave and seek shelter, as you are looking around you notice some big claw mark... You are not alone, do you wish to explore the cave more?";
+        } else if (explore.includes(input)) {
+            console.log("Player Explores House"); 
+            currentState = "explore house"; 
+            output.innerHTML = "As you walk around the house you notice a chest. Do you wish to open the chest?";
+        } else if (leave.includes(input)) { // Check for leave command
+        console.log("Player Leaves House");
+        currentState = "path"; 
+        output.innerHTML = "You leave the house and return to the path.";
         }
     }
     //house
-    else if (currentState === "house") {
+    else if (currentState === "explore house") {
         if (explore.includes(input)) {
             console.log("Player Explores House"); 
             currentState = "explore house"; 
