@@ -8,7 +8,8 @@ let explore = ["explore"];
 let house = ["enter house"]; 
 let cave = ["enter cave"]; 
 let yes = ["yes"];
-let no = ["no"]; 
+let no = ["no"];
+let leave = ["leave"]; 
 
 
 
@@ -57,7 +58,7 @@ function processCommands() {
         if (house.includes(input)) {
             console.log("Player Enters House");
             currentState = "house";
-            output.innerHTML = "You enter the house and it seems to be abandoned, but something strange.... you can tell something seems off about this house. Do you still want to explore?";
+            output.innerHTML = "You enter the house and it seems to be abandoned, but something strange.... you can tell something seems off about this house. Do you want to Explore or leave?";
 
         } else if (cave.includes(input)) {
             console.log("Player Enters Cave");
@@ -70,8 +71,12 @@ function processCommands() {
         if (explore.includes(input)) {
             console.log("Player Explores House"); 
             currentState = "explore house"; 
-            output.innerHTML = "As you walk around the house you notice a chest. Do you wish to open the chest?"; 
-        } 
+            output.innerHTML = "As you walk around the house you notice a chest. Do you wish to open the chest?";
+        } else if (leave.includes(input)) { // Check for leave command
+        console.log("Player Leaves House");
+        currentState = "path"; 
+        output.innerHTML = "You leave the house and return to the path.";
+    }
     }
         //chest
     else if(currentState === "explore house") {
@@ -91,11 +96,11 @@ function processCommands() {
             console.log("Player Chooses to Explore Cave"); 
             currentState = "explore cave"; 
             output.innerHTML = "As you go further into the cave, you start hearing some strange sounds. As you get closer to the sound, you see a trail of blood. Do you dare to explore further or go back and follow the path?";
-        } else if (path.includes(input)) {
-            console.log("Player Returns to Path from Cave");
-            currentState = "path";
-            output.innerHTML = "You decide to leave the cave and follow the path again.";
-        }
+        } else if (leave.includes(input)) { // Check for leave command
+        console.log("Player Leaves House");
+        currentState = "path"; 
+        output.innerHTML = "You leave the house and return to the path.";
+    }
     }
 }
 function repeatText() {
