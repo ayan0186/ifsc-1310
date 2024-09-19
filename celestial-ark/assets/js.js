@@ -50,7 +50,7 @@ function processCommands() {
             currentState = "path"; 
             console.log("player chooses to explore");
             output.innerHTML = "You chose to explore the area more and it starts pouring rain. You then find a cave do you want to enter cave or go back on the path?";
-        }
+        } 
 }   
     //path
     else if (currentState === "path") {
@@ -85,7 +85,19 @@ function processCommands() {
             output.innerHTML = "You ignored the chest"; 
             }
         }
+    //cave 
+    else if (currentState === "cave") {
+        if (explore.includes(input)) {
+            console.log("Player Chooses to Explore Cave"); 
+            currentState = "explore cave"; 
+            output.innerHTML = "As you go further into the cave, you start hearing some strange sounds. As you get closer to the sound, you see a trail of blood. Do you dare to explore further or go back and follow the path?";
+        } else if (path.includes(input)) {
+            console.log("Player Returns to Path from Cave");
+            currentState = "path";
+            output.innerHTML = "You decide to leave the cave and follow the path again.";
+        }
     }
+}
 function repeatText() {
     let output = document.getElementById('chatbox'); 
     let messages = "";
