@@ -48,7 +48,7 @@ button {
 }
 
 body{ 
-  background-image:url('celestial-ark/assets/img/forest.jpg');
+  background-image:('assets/img/forest.jpg');
   background-size: cover; /* Make sure the image covers the whole page */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Prevent repeating the image */
