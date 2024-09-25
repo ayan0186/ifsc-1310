@@ -87,7 +87,9 @@ function truthTable() {
 }
 
 function JsFun() { 
-    if (prompt('Is JavaScript fun?')==='yes') alert('You win'); else alert('you lose');
+    if (prompt('Is JavaScript fun?')==='yes') 
+        alert('You win'); 
+    else alert('you lose');
 
 }
 
@@ -105,7 +107,28 @@ function calculate() {
         "Bitwise or Operator: " + orResults + "\n" + 
         "Bitwise XOR Operator: " + XorResults
     );
-    
+}
 
+//hw5
+function array() {
+    let cars = ["BMW", "Bugatti", "Pagani", "Lamborghini", "Porche"]; 
+    document.getElementById("print").innerHTML = cars; 
+}
 
+function loop() {
+let i = 0     
+let text = ""
+    while (i<10) {
+        text += "<br>" + "The Number is: " + i
+        i++; 
+    }
+document.getElementById("print").innerHTML = text; 
+}
+
+function recursive() {
+    let text = prompt("Enter Happy Time");
+    if (text !== "happy time"){
+        recursive();
+    }
+    document.getElementById("print").innerHTML += "<br>" + text + "<br>"; 
 }
