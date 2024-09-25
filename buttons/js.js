@@ -109,7 +109,7 @@ function calculate() {
     );
 }
 
-//hw5
+//hw5 option A code
 function array() {
     let cars = ["BMW", "Bugatti", "Pagani", "Lamborghini", "Porche"]; 
     document.getElementById("print").innerHTML = cars; 
