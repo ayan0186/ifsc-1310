@@ -132,3 +132,116 @@ function recursive() {
     }
     document.getElementById("print").innerHTML += "<br>" + text + "<br>"; 
 }
+
+//hw6
+function arrayLoop() {
+    let fruits = ["Apple", "Banana", "Orange", "Kiwi", "Watermelon"];
+    let results = ""; 
+    for (let i = 0; i < fruits.length; i++ ) {
+        results += fruits[i];
+        if (i < fruits.length - 1) {
+            results += ", ";
+        }
+    }
+
+    document.getElementById("print2").innerHTML = results; 
+}
+
+function forEach() { 
+    const numbers = [21, 22 ,23 ,24, 25];
+    let txt = "";
+    numbers.forEach(myFunction);
+    document.getElementById("print2").innerHTML = txt
+function myFunction(value, index, array) {
+  txt += value + "<br>";
+}
+}
+
+function push() { 
+    const soda = ["Coke", "Pepsi", "Fanta", "Sprite"]
+    soda.push("Dr. Pepper"); 
+    document.getElementById("print2").innerHTML += soda; 
+}
+
+function pop() { 
+    const soda2 = ["Coke", "Pepsi", "Fanta", "Sprite"]
+    soda2.pop(); 
+    document.getElementById("print2").innerHTML = ""; 
+    document.getElementById("print2").innerHTML += soda2;
+}
+
+function shift() { 
+    const soda3 = ["Coke", "Pepsi", "Fanta", "Sprite"]
+    soda3.shift(); 
+    document.getElementById("print2").innerHTML = ""; 
+    document.getElementById("print2").innerHTML = soda3;
+}
+
+function unshift() { 
+    const soda4 = ["Coke", "Pepsi", "Fanta", "Sprite"]
+    soda4.unshift("Mountain Dew"); 
+    document.getElementById("print2").innerHTML = ""; 
+    document.getElementById("print2").innerHTML = soda4;
+}
+
+function twoD() {
+    const fruits2D = [
+        ["Apple", "Banana", "Cherry"],
+        ["Orange", "Kiwi", "Grape"],
+        ["Pineapple", "Mango", "Peach"]
+    ];
+    
+    let results = "";
+    
+    for (let i = 0; i < fruits2D.length; i++) {
+        for (let j = 0; j < fruits2D[i].length; j++) {
+            results += fruits2D[i][j] + " ";
+        }
+        results += "<br>"; // Line break after each row
+    }
+    
+    document.getElementById("print2").innerHTML = results;
+}
+
+function threeD() {
+    const fruits3D = [
+        [
+            ["Apple", "Banana"], // Basket 1
+            ["Orange", "Kiwi"]   // Basket 2
+        ],
+        [
+            ["Grape", "Pineapple"], // Basket 3
+            ["Mango", "Peach"]      // Basket 4
+        ]
+    ];
+    
+    let results = "";
+    
+    for (let i = 0; i < fruits3D.length; i++) {
+        for (let j = 0; j < fruits3D[i].length; j++) {
+            for (let k = 0; k < fruits3D[i][j].length; k++) {
+                results += fruits3D[i][j][k] + " ";
+            }
+            results += "<br>"; // Line break after each basket
+        }
+        results += "<br>"; // Extra line break between different groups
+    }
+    document.getElementById("print2").innerHTML = ""; 
+    document.getElementById("print2").innerHTML = results;
+}
+
+function lengthArray() { 
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("print2").innerHTML = "";
+fruits[fruits.length] = "Kiwi";
+document.getElementById("print2").innerHTML = fruits;
+}
+
+function typeOf() { 
+    const fruitsTypeOf = ["Banana", "Orange", "Apple", "Mango"];
+ 
+    const typeofFruits = typeof fruitsTypeOf;
+
+    document.getElementById("print2").innerHTML = "";
+    document.getElementById("print2").innerHTML = typeofFruits;
+}
