@@ -245,3 +245,69 @@ function typeOf() {
     document.getElementById("print2").innerHTML = "";
     document.getElementById("print2").innerHTML = typeofFruits;
 }
+
+function displayOutput(message) {
+    document.getElementById("print3").innerHTML = message; 
+}
+
+function displayOutput2(message2) {
+    document.getElementById("print4").innerHTML = message2; 
+}
+
+function demonstrateDivision() {
+    const result = "100" / "10";
+    displayOutput(`"100" / "10" = ${result}`);
+}
+
+function demonstrateAddition() {
+    const result = "100" + "10"; 
+    displayOutput(`"100" + "10" = ${result}`)
+}
+
+function demonstrateNaN() {
+    const result = "Hello" / 10;
+    displayOutput(`Demonstrating NaN: "Hello" / 10 = ${result}`);
+}
+
+function demonstrateInfinity() {
+    const result = 1 / 0;
+    displayOutput(`Demonstrating Infinity: 1 / 0 = ${result}`);
+}
+
+function demonstrateHexa() {
+    const result = (0xFF).toString(); // 255 in decimal
+    displayOutput(`Demonstrating Hexadecimal: 0xFF = ${result}`);
+}
+
+function stringLength() {
+    const str = "Hello World"; 
+    displayOutput2(`"${str}"  has ${str.length} "characters" `); 
+}
+
+function stringConcat() {
+    const str1 = "Hello"; 
+    const str2 = "World"; 
+    displayOutput2(`${str1} ${str2} = "${str1}" + "${str2}"`); 
+}
+
+function stringUppercase() {
+    const str = "Hello World";
+    displayOutput2(`Uppercase String: "${str}" -> "${str.toUpperCase()}"`);
+}
+
+function stringLowercase() {
+    const str = "Hello";
+    displayOutput2(`Lower Case: "${str}" -> "${str.toLowerCase()}"`);
+}
+
+function stringTrim() {
+    const str = "    HELLO  WORLD"; 
+    displayOutput2(`${str} -> ${str.trim()}`); 
+}
+
+function combine() {
+    let str1 = document.getElementById("firstName").value; 
+    let str2 = document.getElementById("lastName").value; 
+
+    displayOutput2(`${str1} ${str2} `);
+}
