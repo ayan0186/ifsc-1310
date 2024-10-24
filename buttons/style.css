@@ -1,0 +1,35 @@
+#color {
+    width: 350px;        /* Full width of the container */
+    height: 50px;      /* Increase the height to make it bigger */
+    background-color: #ffff;
+    border: 1px solid #666;
+    padding: 20px;      /* Add more padding for better spacing */
+    margin-bottom: 10px;
+    color: #fff;   
+}
+
+#brown {
+    width: 150px;
+    height: 50px;
+    padding: 20px; 
+    right: 200px;
+    text-align: center;
+    margin-left:50px;
+}
+
+#hover {
+    width: 150px;        /* Full width of the container */
+    height: 50px;      /* Increase the height to make it bigger */
+    background-color: #ffff;
+    border: 1px solid #666;
+    padding: 100px;      /* Add more padding for better spacing */
+    margin-bottom: 10px;
+    color: black;
+    
+}
+
+#time {
+    margin-bottom: 20px;
+    
+}
+

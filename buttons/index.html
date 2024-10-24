@@ -7,7 +7,7 @@
   <meta name="author" content="Ayan Huda" />
   <meta name="viewport" content="width=device-width, inital-scale=1" />
  <!--linking the css page to the index.html file-->
-  <link href="button-project/index.html" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 
     </head>
 
@@ -88,6 +88,30 @@
             <input id = "firstName" type="text" placeholder="Enter First Name" />
             <input id = "lastName" type="text" placeholder="Enter Last Name" />
             <button type="button" onclick="combine()"> Combine Names</button>
+        </section>
+
+        <section>
+            <h2>Hexdecimal Color Code</h2>
+            <!--The box that's background changes-->
+
+            <div id="color"></div>
+            <!--TextBox input the hexa code-->
+
+            <input id="colorName" type="text" placeholder="Enter a Hexadecimal Code" maxlength="7"/> 
+            <button type="button" onclick="changeBackground()"> Change Background! </button>
+
+            <button id = "brown" type="button" onclick="changeColor()" style="background-color: orange;">Orange -> Brown</button>
+        </section>
+        <section>
+            <h2>Events</h2>
+            <p id="event"></p>
+
+            <button id="time" onclick="document.getElementById('event').innerHTML=Date()">The time is?</button>
+
+            <div id="hover" onmouseenter='mouseEnter()'  onmouseleave='mouseLeave()' onclick="mouseClick()" ondblclick="mouseDBL()">
+                Hover Over Me, Click Me, Double Click Me! 
+            </div>
+
         </section>
         <script src="js.js"></script>
     </body>

@@ -311,3 +311,34 @@ function combine() {
 
     displayOutput2(`${str1} ${str2} `);
 }
+
+ function changeBackground() {
+     let colors = document.getElementById('colorName').value;
+    
+     if (!colors.startsWith('#') || colors.length != 7) {
+         alert("Type Box Error: Make sure you enter a valid hexadecimal code, make sure you start it with '#', and make sure it is 7 characters long");
+            return; 
+     }
+
+     document.getElementById('color').style.backgroundColor = colors; 
+ }
+
+function changeColor() {
+    document.getElementById("brown").style.backgroundColor = "brown"; 
+}
+
+function mouseEnter() {
+    document.getElementById("hover").style.backgroundColor = "red";
+  }
+  
+function mouseLeave() {
+    document.getElementById("hover").style.backgroundColor = "green";
+  }
+
+function mouseClick() {
+    document.getElementById("hover").style.backgroundColor = "blue"
+}
+
+function mouseDBL() {
+    document.getElementById("hover").style.backgroundColor = "orange"
+}
