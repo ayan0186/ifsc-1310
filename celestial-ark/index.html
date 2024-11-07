@@ -3,8 +3,9 @@
     <head>
         <title>Celestial Ark</title>
   <meta charset="UTF-8" />
-  <meta name="description" content="Text based adevnture game, " />
+  <meta name="description" content="Text based adevnture game" />
   <meta name="author" content="Ayan Huda" />
+  <meta name="keywords" content="celestial ark">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
  <!--linking the css page to the index.html file-->
  <link href="assets/style.css" rel="stylesheet" />  
@@ -14,17 +15,31 @@
     <main>
         <header>
         <div id="Title" class = "primary">
-            <h1><a href="index.html">Celestial Ark</a></h1>
+            <h1><a href="index.html">Celestial Ark Prototype</a></h1>
             <h2>A Text Based Adventure Game</h2>
-        </div> 
+        </div>
+        <div>
+            <nav class="primary" id="tabs">
+                <ul>
+                <li onclick="control()">Controls</li>
+                <li onclick="background()">Background</li>
+                <li>Contact</li>
+                </ul>
+              </nav>
+        </div>
         </header>
         <div id="chatbox">
             Welcome to <strong>Celestial Ark!</strong> Type <strong>Controls</strong> for how to play the game. Type <strong>Start</strong> to start the game. Type <strong>Story</strong> to read the background. Enjoy!
         </div>
     <div>
-        <input type = "text" id = "userCommands" placeholder="Type a command..." />
+        <input type = "text" id = "userCommands" placeholder="Type a command..." oninput= "this.value = this.value.toLowerCase();"/>
         <button type ="button" onclick="processCommands()">Send</button>
     </div>
         <script src="assets/js.js"></script>
-    </main>    
+
+        <footer class="primary">
+            <h6>&copy; 2024 Ayan Huda <a href="#tabs">Back To Top</a></h6>
+        </footer>  
+  </main>
   </body>
+  </html>

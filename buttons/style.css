@@ -30,6 +30,13 @@
 
 #time {
     margin-bottom: 20px;
-    
 }
 
+#Ctime {
+    font-size: 1.5em;
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+    width: 100%;
+    text-align: center;
+}

@@ -20,6 +20,12 @@
                     <h2><a href="index.html">All New Button Opperations and Funtions</a></h2>
                 </div>
             </header>
+        
+        <section>
+            <h2>Current Time:</h2>
+            <p id="Ctime"></p>
+        </section>
+        
         <section class="container">
            <h2 id="add">Buttons</h2> 
            <!--Buttons for operations-->
@@ -105,13 +111,86 @@
         <section>
             <h2>Events</h2>
             <p id="event"></p>
-
+            
+            <!--This Event Displays the Time when clicked-->
             <button id="time" onclick="document.getElementById('event').innerHTML=Date()">The time is?</button>
 
+            <!--This Event makes it so that when your mouse enters, leaves, clicks once, clicks twice it changes the color-->
             <div id="hover" onmouseenter='mouseEnter()'  onmouseleave='mouseLeave()' onclick="mouseClick()" ondblclick="mouseDBL()">
                 Hover Over Me, Click Me, Double Click Me! 
             </div>
 
+        </section>
+
+        <section>
+            <h2>Forms</h2>
+            <h3>Login Information</h3>
+            <!--Form for entering username and password. Used attribute: Max Length, Input: Text-->
+            <form action="https://www.w3schools.com/action_page.php">
+                <Fieldset>
+                    <legend>Enter Your Login Username and Password</legend>
+
+                        <label for="username">Username:</label><br>
+                        <input type="text" id="username" name="username"><br>
+
+                        <label for="pwd">Password:</label><br>
+                        <input type="password" id="pwd" name="pwd" maxlength="8"><br><br>
+
+                        <input type="submit" value="Submit">
+                </Fieldset>
+            </form>
+
+            <p>Password Must Not Exceed 8 Characters</p>
+
+            <!--Form for entering name and email. Used attributes: Value, Input: Text-->
+            <h3>Contact Information</h3>
+            <form action="https://www.w3schools.com/action_page.php ">
+                <fieldset>
+                    <legend>Enter Your Name and Email</legend>
+                <label for="first_name">First name:</label><br>
+                <input type="text" id="fname" name="Fname" value="John"><br><br>
+
+                <label for="last_name">Last name:</label><br>
+                <input type="text" id="lname" name="Lname" value="Doe"><br><br>
+                
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" value="example@gmail.com"><br><br>
+
+                <input type="submit" value="Submit">
+                </fieldset>
+            </form>
+
+            <h3>Security Question</h3>
+            <form action="https://www.w3schools.com/action_page.php">
+                <fieldset>
+                    <legend>Enter Your Favorite</legend>
+                <input list="cars" name="Fav_Car">
+                <datalist id="cars">
+                    <option value="Buggatti">
+                    <option value="Lamborgini">
+                    <option value="Ferrari">
+                    <option value="Supra">
+                    <option value="Mclaren">
+                    <option value="Pagani">
+                    <option value="BMW">
+                    <option value="Toyota">
+                    <option value="Honda">
+                    <option value="Mazda">
+                    <option value="Volkwagen">
+                    <option value="Kia">
+                </datalist>
+            <input type="submit" value="Submit">
+            </fieldset>
+            </form>
+        </section>
+
+        <section>
+            <h1>Guess The Correct Button!</h1>
+            <button id="clickButton1" class = "button" onclick="Guess(0)">Click Me!</button>
+            <button id="clickButton2" class = "button" onclick="Guess(1)">Click Me!</button>
+            <button id="clickButton3" class = "button" onclick="Guess(2)">Click Me!</button>
+            <p id="message">Press "Start" to begin the game.</p>
+            <button onclick="startGame()">Start</button>
         </section>
         <script src="js.js"></script>
     </body>

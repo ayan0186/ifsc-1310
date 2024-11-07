@@ -17,6 +17,36 @@ html {
     padding: 10px;
   }
 
+  #tabs{ 
+    cursor: pointer; 
+  }
+
+  #tabs nav{
+    margin:2px auto;
+    
+}
+
+  #tabs ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+  #tabs ul li{ 
+  color: #000000;
+  text-decoration: none;
+  background-color: lightgray;
+  background-color:rbga(0,0,0, .4); 
+  padding: 5px;
+  border-radius: 40px;
+}
+
+  #tabs ul li:hover {
+    background-color: darkgrey;
+    transition: 1ms;
+  }
+
   #chatbox {
     width: 100%;        /* Full width of the container */
     height: 350px;      /* Increase the height to make it bigger */
@@ -29,23 +59,27 @@ html {
 }
 
 #userCommands {
-    width: 100%;         /* Full width */
+    width: 600px;         /* Full width */
     height: 50px;        /* Increased height */
     padding: 10px;       /* Internal padding for spacing */
     font-size: 18px;     /* Larger text size */
     border: 1px solid #666;
     border-radius: 5px;  /* Rounded corners */
     box-sizing: border-box;
+    margin: 10px;
 }
 
 button {
     text-align: center;
-    display: flex;          /* Enables flexbox layout */
+    display:inline;          /* Enables flexbox layout */
     justify-content: space-between; /* Ensures space is managed well */
     align-items: center;    /* Vertically center-align the items */
     margin-top: 10px;
-    height: 20px;
-    width: 50px;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    border: 1px solid #666;
+    border-radius: 5px;
 }
 
 body{ 
@@ -54,4 +88,22 @@ body{
   background-repeat: no-repeat; /* Prevent repeating the image */
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
+}
+
+#chatbox {
+  transition: 0.3s;
+}
+
+button {
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 600px){
+  #tabs ul{                                       /*---making it mobile friendly---*/
+  flex-direction: column;
+  gap:20px;
+  max-width: 250px;
+  margin:auto;
+
+  }
 }

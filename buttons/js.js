@@ -1,4 +1,12 @@
 //JavaScript Commands
+//HW11 Added
+setInterval(current_Time, 1000);
+
+function current_Time() {
+  const d = new Date();
+  document.getElementById("Ctime").innerHTML = d.toLocaleTimeString();
+}
+
 //This Tells the Buttons what to do
 function addNumber() {
     var num1 = parseFloat(prompt("Enter First Number"));
@@ -341,4 +349,44 @@ function mouseClick() {
 
 function mouseDBL() {
     document.getElementById("hover").style.backgroundColor = "orange"
+}
+
+let timeout;
+let correctIndex; 
+
+function startGame() { 
+    document.getElementById("message").textContent = "Guess The Correct Button In 3 Seconds to Win The Game!"
+
+    //random buttons
+    correctIndex = Math.floor(Math.random() * 3); 
+
+    //enable the buttons
+    //The querySelectorAll() method in JavaScript is used to select multiple elements 
+    const buttons = document.querySelectorAll(".button"); 
+    buttons.forEach(button => button.disabled = false);
+
+
+    //timeout in the () loseGame function runs when the time is over
+    timeout = setTimeout(loseGame, 3000); 
+}
+
+//if then statement for picking the correct index
+function Guess(selectedIndex) {
+    clearTimeout(timeout); 
+
+    if(selectedIndex == correctIndex) {
+        document.getElementById("message").textContent = "You Win!"
+    } else {
+        document.getElementById("message").textContent = "You Lose!"
+    }
+
+}
+
+function loseGame() {
+    // If time's up, the player loses
+    document.getElementById("message").textContent = "Time's up! You Lose!";
+
+    // Disable the buttons when time runs out
+    const buttons = document.querySelectorAll(".button");
+    buttons.forEach(button => button.disabled = true);
 }

@@ -1,7 +1,7 @@
 let startGame = ["Start", "start"]; 
 let controls = ["controls", "Controls"];
 let synopsis = ["story", "Story"]; 
-let currentState = "start"; 
+let currentState = ["start"]; 
 let walk = ["walk"]; 
 let path = ["follow path"]; 
 let explore = ["explore"]; 
@@ -11,11 +11,21 @@ let yes = ["yes"];
 let no = ["no"];
 let leave = ["leave"]; 
 
+function control() {
+    let output = document.getElementById("chatbox"); 
+    output.innerHTML = "Controls: You can type commands like walk, explore, and follow path.";
+}
 
+function background() {
+    let output = document.getElementById("chatbox");
+    output.innerHTML = "Background: You wake up in a mysterious forest, and your adventure begins!";
+}
 
 function processCommands() { 
     var input = document.getElementById("userCommands").value.toLowerCase();
     var output = document.getElementById("chatbox");
+    let haskey = false;
+    let treasure = false; 
 
     console.log("Current State: " + currentState); // Debugging: show current state
     console.log("User Input: " + input); // Debugging: show user input
@@ -26,7 +36,7 @@ function processCommands() {
         currentState = "forest"; // Update state to "forest" tells us that when user types start the game state is changed to forest
         output.innerHTML = "You find yourself transported to a dark and creepy forest. What do you do?";
 
-    } else if (controls.includes(input)) {
+    }else if (controls.includes(input)) {
         console.log("Player Enter Controls");
         output.innerHTML = "In this game you type 1 or 2 words to command your player. You can use commands such as walk, explore, and follow path. As you play, you will get some options as to what you want to do, remember to read everything carefully as every chose you make is critical and some chooses may not let you go back. This is a game where proper choice making skills are needed. Goodluck and Enjoy!";
 
@@ -37,7 +47,7 @@ function processCommands() {
     } 
     
     //forest
-    else if (currentState === "forest") {
+    if(currentState === "forest") {
         if (walk.includes(input)) {
             currentState = "path";
             console.log("Player Encounters Path");
@@ -55,7 +65,7 @@ function processCommands() {
         } 
 }   
     //path
-    else if (currentState === "house") {
+    if (currentState === "house") {
         if (house.includes(input)) {
             console.log("Player Enters House");
             currentState = "explore house";
@@ -72,7 +82,7 @@ function processCommands() {
         }
     }
     //house
-    else if (currentState === "explore house") {
+    if (currentState === "explore house") {
         if (explore.includes(input)) {
             console.log("Player Explores House"); 
             currentState = "explore house"; 
@@ -84,10 +94,10 @@ function processCommands() {
     }
     }
         //chest
-    else if(currentState === "explore house") {
+    if(currentState === "explore house") {
         if (yes.includes(input)) {
-            console.log("Player Opens Chest"); 
-            repeatText();
+            console.log("Player Obatains Key"); 
+            repeatText(); 
             currentState = "house";
         } else if (no.includes(input)) {
             console.log("Player Ignores Chest")
@@ -96,7 +106,7 @@ function processCommands() {
             }
         }
     //cave 
-    else if (currentState === "cave") {
+    if (currentState === "cave") {
         if (explore.includes(input)) {
             console.log("Player Chooses to Explore Cave"); 
             currentState = "explore cave"; 
