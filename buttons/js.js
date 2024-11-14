@@ -390,3 +390,13 @@ function loseGame() {
     const buttons = document.querySelectorAll(".button");
     buttons.forEach(button => button.disabled = true);
 }
+
+function showParentNode() {
+    let bold = document.querySelector('b'); 
+    alert(bold.parentNode); 
+}
+
+function showNextSiblingNode() {
+    let bold2 = document.querySelector('b');
+    alert(bold2.nextSibling); 
+}
